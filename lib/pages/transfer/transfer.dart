@@ -18,7 +18,11 @@ class _TransferScreenState extends State<TransferScreen> {
         leading: IconButton(onPressed: ()=> Navigator.pop(context), icon: Icon(Icons.arrow_back_ios_sharp)),
         title: Text('Transfer'),
       ),
-      body: ,
+      body: body(),
     ));
+  }
+
+  Widget body(){
+    return Container();
   }
 }

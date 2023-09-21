@@ -11,11 +11,11 @@ class CardsScreen extends StatelessWidget {
         automaticallyImplyLeading: false, leading: IconButton(onPressed: () => Navigator.pop(context), icon: const Icon(Icons.arrow_back_ios_new)),
         title: const Text('Your Cards'),
         actions: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.add_card, color: Colors.blue,))
+          IconButton(onPressed: (){}, icon: const Icon(Icons.add_card, color: Colors.blue,))
         ],
       ),
       body: ListView(
-        shrinkWrap: true, physics: AlwaysScrollableScrollPhysics(), padding: EdgeInsets.symmetric(horizontal: 10), children: [
+        shrinkWrap: true, physics: const AlwaysScrollableScrollPhysics(), padding: const EdgeInsets.symmetric(horizontal: 10), children: [
           mainCard(),
           otherCards()
         ],
@@ -25,13 +25,13 @@ class CardsScreen extends StatelessWidget {
   
   Widget mainCard() {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10),
+      margin: const EdgeInsets.symmetric(vertical: 10),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         mainAxisSize: MainAxisSize.min, 
         children: [
-          Text('Main card'),
-          SizedBox(height: 20,),
+          const Text('Main card'),
+          const SizedBox(height: 20,),
           Card(
             color: Colors.indigoAccent, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
             child: Padding(
@@ -40,7 +40,7 @@ class CardsScreen extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween, children: const [
                       Text('Physical card'), 
                       Text('VISA'),
                       Spacer(),
@@ -54,6 +54,8 @@ class CardsScreen extends StatelessWidget {
           )
         ],
       )
-    )
+    );
   }
+  
+  otherCards() {}
 }
