@@ -1,4 +1,4 @@
-import 'package:fintech_ui/authentication/set_pin.dart';
+import 'package:fintech_ui/authentication/set_mobile_number.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const SetPin(),
+      home: const SetMobileNumber(),
     );
   }
 }
